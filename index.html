@@ -1,17 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather Alerts App</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <h1>Weather Alerts App</h1>
-  <input type="text" id="state-input" placeholder="Enter state abbreviation">
-  <button id="fetch-alerts">Get Weather Alerts</button>
-  <div id="alerts-display"></div>
-  <div id="error-message" class="hidden"></div>
-  <script src="./index.js"></script>
-</body>
-</html>
+<form id="weather-form">
+    <label for="state-input">State abbreviation</label>
+    <input
+        type="text"
+        id="state-input"
+        placeholder="Enter state abbreviation"
+        maxlength="2"
+        autocomplete="off"
+    >
+    <button type="submit">Get Weather Alerts</button>
+</form>
+
+<div id="loading-spinner" class="hidden">
+    Loading weather alerts...
+</div>
+
+<div id="error-message" class="hidden" role="alert"></div>
+
+<div id="alerts-display" aria-live="polite"></div>
